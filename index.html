@@ -1,256 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+    <title>Главная - Z-MOTORS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="h-full">
 
-    <header>
-        <a href="index.html" target="_blank">На главную</a>
-        <a href="magazini.html" target="_blank">Магазины</a>
-        <a href="kontakti.html" target="_blank">Контакты</a>
-        <p>+7(888) 423-42-42</p>
-    </header>
+<header class="site-header">
+    <a href="index.html" class="header-link active">На главную</a>
+    <a href="magazini.html" class="header-link">Магазины</a>
+    <a href="kontakti.html" class="header-link">Контакты</a>
+    <p class="phone">+7(888) 423-42-42</p>
+</header>
 
-    <main>
-        <div class="up">
-            <img src="photos/logo_dark.png" alt="logo" width="200">
-            <div class="katalog">
-                <a href="katalog.html">☰ Каталог</a>
+<main class="main-content home-page">
+    <!-- Герой-секция -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <img src="photos/logo_dark.png" alt="Z-MOTORS" class="hero-logo">
+            <h1 class="hero-title">Мототехника<br>для настоящих ценителей</h1>
+            <p class="hero-subtitle">Профессиональная техника, выгодные цены, гарантия качества</p>
+            <a href="katalog.html" class="hero-button">☰ Перейти в каталог</a>
+        </div>
+    </section>
+
+    <!-- Инфо-баннер -->
+    <section class="info-section">
+        <div class="info-container">
+            <img src="photos/info_now.png" alt="Акции и предложения" class="info-banner">
+        </div>
+    </section>
+
+    <!-- Партнеры -->
+    <section class="partners-section">
+        <div class="container">
+            <h2 class="section-title">Нам доверяют</h2>
+            <p class="section-subtitle">
+                <span class="highlight">Мы работаем с ведущими компаниями России.</span> Являемся ключевыми
+                поставщиками, помогаем в организации массовых мероприятий, нацеленных на развитие
+                мототранспорта и активного отдыха в России.
+            </p>
+            
+            <div class="partners-grid">
+                <div class="partner-card">
+                    <img src="logos/Partner_6.png" alt="Avito" class="partner-logo">
+                </div>
+                <div class="partner-card">
+                    <img src="logos/yandex_logo.png" alt="Яндекс" class="partner-logo">
+                </div>
+                <div class="partner-card">
+                    <img src="logos/Partner_9.png" alt="Сбербанк" class="partner-logo">
+                </div>
             </div>
         </div>
+    </section>
 
-        <section class="infoocol"><br><br>
-            <img id="infoo" src="photos/info_now.png" alt="info1" width="100%" height="700">
-        </section>
-        <section class="moto">
-            <div class="all">
-                <div class="card"><img src="photos/gr8 f300a.png" alt="gr8" width="200"><br>
-                    <p>Мотоцикл GR8 f300a (4t)</p>
-                    <p>330 182 ₽ ㅤ<span>399 990</span></p>
-                    <div class="red2">
-                    <div class="red"><p>в рассрочку <br>
-                    <span> 30 000 ₽ / мес.</span></p></div><div class="red"><p>В кредит<br><span> 12 000 ₽ / мес.</span></p></div></div><br>
-                    <div class="red3"><p>Вернем 36 000₽</p></div><br>
-                    <div class="red3"><p>Гарантия лучшей цены</p></div>
+    <!-- Преимущества -->
+    <section class="features-section">
+        <div class="container">
+            <div class="feature-card feature-orange">
+                <div class="feature-icon">
+                    <img src="photos/favourite.png" alt="Лучшие цены" width="150" height="150">
                 </div>
-                <div class="card"><img src="photos/gr8 t300l.png" alt="gr8" width="200" height="150"><br>
-                    <p>Мотоцикл GR8 t300l</p>
-                    <p>431 990 ₽ ㅤ<span>479 990</span></p>
-                    <div class="red2">
-                    <div class="red"><p>в рассрочку <br>
-                    <span> 36 000 ₽ / мес.</span></p></div><div class="red"><p>В кредит<br><span> 14 400 ₽ / мес.</span></p></div></div><br>
-                    <div class="red3"><p>Вернем 43 200₽</p></div><br>
-                    <div class="red3"><p>Гарантия лучшей цены</p></div>
-                </div>
-                <div class="card"><img src="photos/progasi hardcore.jpg" alt="gr8" width="200" height="150"><br>
-                    <p>Мотоцикл PROGASI HARDCORE</p>
-                    <p>419 990 ₽ ㅤ</p>
-                    <div class="red2">
-                    <div class="red"><p>в рассрочку <br>
-                    <span> 35 000 ₽ / мес.</span></p></div><div class="red"><p>В кредит<br><span> 14 000 ₽ / мес.</span></p></div></div><br>
-                    <div class="red3"><p>Вернем 42 000₽</p></div><br>
-                    <div class="red3"><p>Гарантия лучшей цены</p></div>
-                </div>
-                <div class="card"><img src="photos/progasi 300 air.jpeg" alt="gr8" width="200" height="152"><br>
-                    <p>Мотоцикл Progasi RACE 300 AIR</p>
-                    <p>289 990 ₽ </p>
-                    <div class="red2">
-                    <div class="red"><p>в рассрочку <br>
-                    <span> 24 170 ₽ / мес.</span></p></div><div class="red"><p>В кредит<br><span> 9 670 ₽ / мес.</span></p></div></div><br>
-                    <div class="red3"><p>Вернем 29 000₽</p></div><br>
-                    <div class="red3"><p>Гарантия лучшей цены</p></div>
-                </div>
-                <div class="card"><img src="photos/kayo k1.jpg" alt="gr8" width="200"><br>
-                    <p>Мотоцикл KAYO K1 250mx</p>
-                    <p>161 990 ₽ ㅤ<span>179 990</span></p>
-                    <div class="red2">
-                    <div class="red"><p>в рассрочку <br>
-                    <span> 14 000 ₽ / мес.</span></p></div><div class="red"><p>В кредит<br><span> 5 000 ₽ / мес.</span></p></div></div><br>
-                    <div class="red3"><p>Вернем 16 000₽</p></div><br>
-                    <div class="red3"><p>Гарантия лучшей цены</p></div>
-                </div>
-                <div class="card"><img src="photos/bse z1.png" alt="gr8" width="200"><br>
-                    <p>Мотоцикл BSE Z1</p>
-                    <p>169 990 ₽ ㅤ</p>
-                    <div class="red2">
-                    <div class="red"><p>в рассрочку <br>
-                    <span> 14 000 ₽ / мес.</span></p></div><div class="red"><p>В кредит<br><span> 5 000 ₽ / мес.</span></p></div></div><br>
-                    <div class="red3"><p>Вернем 17 000₽</p></div><br>
-                    <div class="red3"><p>Гарантия лучшей цены</p></div>
-                </div>
-                <div class="card"><img src="photos/grx.png" alt="gr8" width="200"><br>
-                    <p>Мотоцикл GR-X YX160</p>
-                    <p>139 490 ₽ ㅤ<span>139 490</span></p>
-                    <div class="red2">
-                    <div class="red"><p>в рассрочку <br>
-                    <span> 11 000 ₽ / мес.</span></p></div><div class="red"><p>В кредит<br><span> 4 000 ₽ / мес.</span></p></div></div><br>
-                    <div class="red3"><p>Вернем 14 000₽</p></div><br>
-                    <div class="red3"><p>Гарантия лучшей цены</p></div>
-                </div>
-            </div>
-        </section>
-        <section class="partners">
-            <h2>Нам доверяют</h2><br>
-            <p><span>Мы работаем с ведущими компаниями России. </span>Являемся ключевыми<br>
-                поставщиками, помогаем в организации массовых мероприятий, нацеленных на развитие<br>
-                мототранспорта и активного отдыха в России.</p>
-
-            <div class="partner_list">
-                <div class="partner_list_items"><img src="logos/Partner_6.png" alt="avito" width="250"></div>
-                <div class="partner_list_items"><img src="logos/yandex_logo.png" alt="yandex_logo" width="250"></div>
-                <div class="partner_list_items"><img src="logos/Partner_9.png" alt="sberbank" width="250""></div>
-                </div>
-            </div>
-        </section><br><br>
-        
-<section class = best_pr>
-    <div class=" best_pr1"><img src=" photos/favourite.png" alt="favorite" width="200" height="200"></div>
-                <div>
-                    <h2>ЛУЧШИЕ ЦЕНЫ,<br> РАССРОЧКА 0%</h2>
-                    <p>Гарантируем цены ниже или вернём 110% разницы</p>
-                </div>
-        </section>
-        <div>ㅤㅤ</div>
-        <section class="videochat">
-            <div class="videochat1"><img src="photos/videochat.png" alt="" width="300" height="300"></div>
-            <div>
-                <h2>БЕСПЛАТНАЯ ВИДЕОКОНСУЛЬТАЦИЯ</h2>
-                <p>Получите консультацию по видео прямо сейчас!<br> Наши менеджеры готовы ответить на любой вопрос<br> о
-                    товаре, гарантии, лицензии вживую!</p>
-            </div>
-        </section>
-        <div>ㅤㅤ</div>
-        <section class="duh">
-            <div class="duh1"><img src="photos/S600xU_2x (1).png" alt="" width="300"></div>
-            <div>
-                <h2>ДВИГАЙТЕСЬ С НАМИ!</h2><br>
-                <p>В "Z-MOTORS" работают лучшие в своем деле. А если у новичка нет<br> опыта, но есть желание расти и
-                    обучаться, мы сделаем из него<br> профессионала.</p>
-            </div>
-        </section>
-        <div>ㅤㅤ</div>
-        <section class="promo">
-            <div></div>
-            <div class="left">
-                <div>
-                    <div>
-                        <h3>ㅤНе нашли того чего искали?</h3>
-                        <p>ㅤНапишите нам и мы подберем транспорт для вас!</p>
-                    </div><br>
-                    <a href="kontakti.html">  Написать</a>
-                </div>
-                <img src="photos/helmet.png" alt="shlem" width="300px">
-            </div>
-            <div class="right">
-                <div>
-                    <p>ㅤПолучайте самые интересные<br> ㅤпредложения первыми -<br> ㅤподписывайтесь на наши<br> ㅤканалы в
-                        соцсетях!</p>
-                    <img src="photos/сотсети.png" alt="" width="200px">
-                </div>
-                <img src="photos/enduro.jpg" alt="" width="400px" height="300px">
-            </div>
-
-        </section>
-        <div>ㅤㅤ</div>
-    </main>
-
-    <footer>
-        <img src="photos/logo_dark.png" alt="" width="300">
-        <hr>
-
-        <div class="infof">
-            <div class="infof_items">
-                <p>ㅤㅤО компании</P>
-                <ul>
-                    <a href="404.html">
-                        <li>О нас</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Миссия компании</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Политика конфиденциальности</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Видеообзоры Z-MOTORS</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Видеоотзывы Z-MOTORS</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Отзывы об Z-MOTORS</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Карьера в Z-MOTORS</li>
-                    </a>
-                    <a href="404.html"></a>
-                    <li>Новости</li></a>
-                    <a href="404.html">
-                        <li>Статьи</li>
-                    </a>
-                </ul>
-            </div>
-
-            <div class="infof_items">
-                <p>ㅤㅤПокупателям</P>
-                <ul>
-                    <a href="404.html">
-                        <li>Акции и скидки</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Доставка и оплата</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Рассрочка и Кредит</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Правила представления информации</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="infof_items">
-                <p>ㅤㅤСервис</P>
-                <ul>
-                    <a href="404.html">
-                        <li>Техническое обслуживание</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Гарантийный ремонт</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Платный ремонт</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="infof_items">
-                <p>ㅤㅤКонтакты</P>
-                <ul>
-                    <a href="404.html">
-                        <li>Письмо директору</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Реквизиты</li>
-                    </a>
-                </ul>
-                <div class="fot">
-                    <p>ㅤтелефон для связи<br><br>
-                        ㅤ+7(888) 423-42-42</p>
+                <div class="feature-content">
+                    <h2 class="feature-title">ЛУЧШИЕ ЦЕНЫ,<br>РАССРОЧКА 0%</h2>
+                    <p class="feature-text">Гарантируем цены ниже или вернём 110% разницы</p>
                 </div>
             </div>
 
+            <div class="feature-card feature-blue">
+                <div class="feature-icon">
+                    <img src="photos/videochat.png" alt="Видеоконсультация" width="150" height="150">
+                </div>
+                <div class="feature-content">
+                    <h2 class="feature-title">БЕСПЛАТНАЯ ВИДЕОКОНСУЛЬТАЦИЯ</h2>
+                    <p class="feature-text">Получите консультацию по видео прямо сейчас! Наши менеджеры готовы ответить на любой вопрос о товаре, гарантии, лицензии вживую!</p>
+                </div>
+            </div>
+
+            <div class="feature-card feature-dark">
+                <div class="feature-icon">
+                    <img src="photos/S600xU_2x%20(1).png" alt="Развитие" width="150" height="150">
+                </div>
+                <div class="feature-content">
+                    <h2 class="feature-title">ДВИГАЙТЕСЬ С НАМИ!</h2>
+                    <p class="feature-text">В "Z-MOTORS" работают лучшие в своем деле. А если у новичка нет опыта, но есть желание расти и обучаться, мы сделаем из него профессионала.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Промо-блок -->
+    <section class="promo-section">
+        <div class="container">
+            <div class="promo-grid">
+                <div class="promo-card promo-yellow">
+                    <div class="promo-content">
+                        <h3 class="promo-title">Не нашли того чего искали?</h3>
+                        <p class="promo-text">Напишите нам и мы подберем транспорт для вас!</p>
+                        <a href="kontakti.html" class="promo-button">Написать</a>
+                    </div>
+                    <img src="photos/helmet.png" alt="Мотошлем" class="promo-image">
+                </div>
+
+                <div class="promo-card promo-white">
+                    <div class="promo-content">
+                        <h3 class="promo-title">Будьте в курсе всех акций!</h3>
+                        <p class="promo-text">Получайте самые интересные предложения первыми - подписывайтесь на наши каналы в соцсетях!</p>
+                        <img src="photos/сотсети.png" alt="Соцсети" class="social-icons">
+                    </div>
+                    <img src="photos/enduro.jpg" alt="Эндуро" class="promo-bike">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Призыв к действию -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Готовы выбрать свой мотоцикл?</h2>
+            <p class="cta-text">Более 100 моделей в наличии. Доставка по всей России.</p>
+            <div class="cta-buttons">
+                <a href="katalog.html" class="cta-button primary">Смотреть каталог</a>
+                <a href="kontakti.html" class="cta-button secondary">Консультация</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <img src="photos/logo_dark.png" alt="Z-MOTORS" class="footer-logo">
+    <hr class="footer-line">
+
+    <div class="footer-info">
+        <div class="footer-section">
+            <p class="section-title">О компании</p>
+            <ul class="footer-links">
+                <li><a href="404.html">О нас</a></li>
+                <li><a href="404.html">Миссия компании</a></li>
+                <li><a href="404.html">Политика конфиденциальности</a></li>
+                <li><a href="404.html">Видеообзоры Z-MOTORS</a></li>
+                <li><a href="404.html">Видеоотзывы Z-MOTORS</a></li>
+                <li><a href="404.html">Отзывы об Z-MOTORS</a></li>
+                <li><a href="404.html">Карьера в Z-MOTORS</a></li>
+                <li><a href="404.html">Новости</a></li>
+                <li><a href="404.html">Статьи</a></li>
+            </ul>
         </div>
 
-    </footer>
+        <div class="footer-section">
+            <p class="section-title">Покупателям</p>
+            <ul class="footer-links">
+                <li><a href="404.html">Акции и скидки</a></li>
+                <li><a href="404.html">Доставка и оплата</a></li>
+                <li><a href="404.html">Рассрочка и Кредит</a></li>
+                <li><a href="404.html">Правила представления информации</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <p class="section-title">Сервис</p>
+            <ul class="footer-links">
+                <li><a href="404.html">Техническое обслуживание</a></li>
+                <li><a href="404.html">Гарантийный ремонт</a></li>
+                <li><a href="404.html">Платный ремонт</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <p class="section-title">Контакты</p>
+            <ul class="footer-links">
+                <li><a href="404.html">Письмо директору</a></li>
+                <li><a href="404.html">Реквизиты</a></li>
+            </ul>
+            <div class="footer-contact">
+                <p class="contact-phone">телефон для связи<br>
+                    <strong>+7(888) 423-42-42</strong></p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 

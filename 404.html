@@ -1,23 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style404.css">
+    <title>Страница не найдена - Z-MOTORS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <img src="Construction-High-Quality-PNG.png" alt="">
-    <div class="page">
-    <div class="block"><h2><span>UNDER CONSTRUCTION<br><br><br>
-    Страница на которую вы<br>
-хотите зайти находится<br>
-в разработке или <br>
-недоступна вовсе</span><br><br>
-<a href="index.html">вернуться домой</a></h2>
+<body class="error-page">
 
+<header class="site-header">
+    <a href="index.html" class="header-link">На главную</a>
+    <a href="magazini.html" class="header-link">Магазины</a>
+    <a href="kontakti.html" class="header-link">Контакты</a>
+    <p class="phone">+7(888) 423-42-42</p>
+</header>
 
-</div>
-</div>
+<main class="error-content">
+    <div class="error-container">
+        <div class="error-code">
+            <span class="error-digit">4</span>
+            <div class="error-icon">🚧</div>
+            <span class="error-digit">4</span>
+        </div>
+        
+        <h1 class="error-title">Страница находится в разработке</h1>
+        
+        <p class="error-description">
+            Страница, на которую вы хотите зайти, находится в разработке<br>
+            или временно недоступна. Мы активно работаем над этим разделом.
+        </p>
+        
+        <div class="error-actions">
+            <a href="index.html" class="error-btn primary-btn">
+                <span class="btn-icon">🏠</span>
+                Вернуться на главную
+            </a>
+            <a href="katalog.html" class="error-btn secondary-btn">
+                <span class="btn-icon">☰</span>
+                Перейти в каталог
+            </a>
+        </div>
+        
+        <div class="error-tips">
+            <h3 class="tips-title">Что можно сделать пока:</h3>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">📞</div>
+                    <h4>Связаться с нами</h4>
+                    <p>Получить консультацию по телефону</p>
+                    <a href="kontakti.html" class="tip-link">Контакты →</a>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🏪</div>
+                    <h4>Посетить магазин</h4>
+                    <p>Найти ближайший магазин Z-MOTORS</p>
+                    <a href="magazini.html" class="tip-link">Магазины →</a>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🏍️</div>
+                    <h4>Выбрать мотоцикл</h4>
+                    <p>Посмотреть каталог мототехники</p>
+                    <a href="katalog.html" class="tip-link">Каталог →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="site-footer error-footer">
+    <div class="footer-content">
+        <img src="photos/logo_dark.png" alt="Z-MOTORS" class="footer-logo">
+        <p class="footer-text">© 2024 Z-MOTORS. Все права защищены</p>
+    </div>
+</footer>
+
 </body>
 </html>

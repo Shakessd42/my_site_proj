@@ -1,136 +1,324 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Магазины</title>
+    <title>Магазины - Z-MOTORS</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="h-full">
 
-    <header>
-        <a href="index.html" target="_blank">На главную</a>
-        <a href="magazini.html" target="_blank">Магазины</a>
-        <a href="kontakti.html" target="_blank">Контакты</a>
-        <p>+7(888) 423-42-42</p>
-    </header>
-    <main>
-        <img src="photos/logo_dark.png" alt="logo" width="200">
-        <div>ㅤ</div>
-        <article class="centres">
-            <h1>ㅤТорговые центры, партнеры и пункты выдачи в Z-MOTORS</h1>
-            <h3>ㅤТорговые центры и партнеры:</h3>
-            <hr>
-<div class="shop"><p>ㅤБалашиха, шоссе Энтузиастов,<br> ㅤ1Б, западная коммунальная зона</p>
-<p>Магазин: +7(410)526-42-42</p></div>
-            <hr>
-            <div class="shop"><p>ㅤБалашиха, шоссе Энтузиастов,<br>ㅤвл1А, ТЦ М7</p>
-                <p>Магазин: +7(450)646-42-42</p></div>
-            <hr>
-            <div class="shop"><p>ㅤСанкт-Петербург, проспект<br>ㅤБольшевиков, 42к2Б</p>
-                <p>Магазин: +7(419)526-42-42</p></div>
-                <hr>
-                <div class="shop"><p>ㅤСанкт-Петербург, улица<br>ㅤРепнинская, 7</p>
-                    <p>Магазин: +7(419)526-42-42</p></div>
-        </article>
-        <div>ㅤ</div>
-    </main>
+<header class="site-header">
+    <a href="index.html" class="header-link">На главную</a>
+    <a href="magazini.html" class="header-link active">Магазины</a>
+    <a href="kontakti.html" class="header-link">Контакты</a>
+    <p class="phone">+7(888) 423-42-42</p>
+</header>
 
+<main class="main-content shops-page">
+    <div class="shops-header">
+        <img src="photos/logo_dark.png" alt="Z-MOTORS" class="shops-logo">
+        <h1 class="page-title">Наши магазины и пункты выдачи</h1>
+        <p class="page-subtitle">Посетите наши магазины лично или выберите удобный пункт выдачи заказов</p>
+    </div>
 
-
-    <footer>
-        <img src="photos/logo_dark.png" alt="" width="300">
-        <hr>
-
-        <div class="infof">
-            <div class="infof_items">
-                <p>ㅤㅤО компании</P>
-                <ul>
-                    <a href="404.html">
-                        <li>О нас</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Миссия компании</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Политика конфиденциальности</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Видеообзоры Z-MOTORS</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Видеоотзывы Z-MOTORS</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Отзывы об Z-MOTORS</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Карьера в Z-MOTORS</li>
-                    </a>
-                    <a href="404.html"></a>
-                    <li>Новости</li></a>
-                    <a href="404.html">
-                        <li>Статьи</li>
-                    </a>
-                </ul>
+    <!-- Карта магазинов -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <div class="map-marker" style="top: 30%; left: 45%;" data-city="Балашиха 1">
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">Балашиха</div>
+                    </div>
+                    <div class="map-marker" style="top: 25%; left: 42%;" data-city="Балашиха 2">
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">Балашиха</div>
+                    </div>
+                    <div class="map-marker" style="top: 20%; left: 15%;" data-city="Санкт-Петербург 1">
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">СПб</div>
+                    </div>
+                    <div class="map-marker" style="top: 22%; left: 18%;" data-city="Санкт-Петербург 2">
+                        <div class="marker-dot"></div>
+                        <div class="marker-label">СПб</div>
+                    </div>
+                    <img src="https://via.placeholder.com/800x400/2c3e50/ffffff?text=Карта+магазинов+Z-MOTORS" alt="Карта магазинов" class="map-image">
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="infof_items">
-                <p>ㅤㅤПокупателям</P>
-                <ul>
-                    <a href="404.html">
-                        <li>Акции и скидки</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Доставка и оплата</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Рассрочка и Кредит</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Правила представления информации</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="infof_items">
-                <p>ㅤㅤСервис</P>
-                <ul>
-                    <a href="404.html">
-                        <li>Техническое обслуживание</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Гарантийный ремонт</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Платный ремонт</li>
-                    </a>
-                </ul>
-            </div>
-            <div class="infof_items">
-                <p>ㅤㅤКонтакты</P>
-                <ul>
-                    <a href="404.html">
-                        <li>Письмо директору</li>
-                    </a>
-                    <a href="404.html">
-                        <li>Реквизиты</li>
-                    </a>
-                </ul>
-                <div class="fot">
-                    <p>ㅤтелефон для связи<br><br>
-                        ㅤ+7(888) 423-42-42</p>
+    <!-- Список магазинов -->
+    <section class="shops-list-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Торговые центры, партнеры и пункты выдачи</h2>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="moscow">Москва и область</button>
+                    <button class="filter-btn" data-filter="spb">Санкт-Петербург</button>
+                    <button class="filter-btn" data-filter="pickup">Пункты выдачи</button>
                 </div>
             </div>
 
+            <div class="shops-grid">
+                <!-- Магазин 1 -->
+                <div class="shop-card" data-city="moscow">
+                    <div class="shop-header">
+                        <h3 class="shop-title">Балашиха, ТЦ М7</h3>
+                        <span class="shop-badge">Флагманский магазин</span>
+                    </div>
+                    <div class="shop-address">
+                        <p>шоссе Энтузиастов, вл1А, ТЦ М7</p>
+                    </div>
+                    <div class="shop-info">
+                        <div class="info-item">
+                            <span class="info-label">Телефон:</span>
+                            <span class="info-value">+7(450)646-42-42</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Часы работы:</span>
+                            <span class="info-value">10:00 - 22:00 ежедневно</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Услуги:</span>
+                            <span class="info-value">Продажа, сервис, тест-драйв</span>
+                        </div>
+                    </div>
+                    <div class="shop-actions">
+                        <button class="action-btn route-btn">Проложить маршрут</button>
+                        <button class="action-btn call-btn">Позвонить</button>
+                    </div>
+                </div>
+
+                <!-- Магазин 2 -->
+                <div class="shop-card" data-city="moscow">
+                    <div class="shop-header">
+                        <h3 class="shop-title">Балашиха, Складской комплекс</h3>
+                        <span class="shop-badge">Склад-магазин</span>
+                    </div>
+                    <div class="shop-address">
+                        <p>шоссе Энтузиастов, 1Б, западная коммунальная зона</p>
+                    </div>
+                    <div class="shop-info">
+                        <div class="info-item">
+                            <span class="info-label">Телефон:</span>
+                            <span class="info-value">+7(410)526-42-42</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Часы работы:</span>
+                            <span class="info-value">09:00 - 20:00 (Пн-Сб)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Услуги:</span>
+                            <span class="info-value">Продажа, сервис, доставка</span>
+                        </div>
+                    </div>
+                    <div class="shop-actions">
+                        <button class="action-btn route-btn">Проложить маршрут</button>
+                        <button class="action-btn call-btn">Позвонить</button>
+                    </div>
+                </div>
+
+                <!-- Магазин 3 -->
+                <div class="shop-card" data-city="spb">
+                    <div class="shop-header">
+                        <h3 class="shop-title">Санкт-Петербург, Центральный</h3>
+                        <span class="shop-badge">Флагманский магазин</span>
+                    </div>
+                    <div class="shop-address">
+                        <p>проспект Большевиков, 42к2Б</p>
+                    </div>
+                    <div class="shop-info">
+                        <div class="info-item">
+                            <span class="info-label">Телефон:</span>
+                            <span class="info-value">+7(419)526-42-42</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Часы работы:</span>
+                            <span class="info-value">10:00 - 21:00 ежедневно</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Услуги:</span>
+                            <span class="info-value">Продажа, сервис, тест-драйв</span>
+                        </div>
+                    </div>
+                    <div class="shop-actions">
+                        <button class="action-btn route-btn">Проложить маршрут</button>
+                        <button class="action-btn call-btn">Позвонить</button>
+                    </div>
+                </div>
+
+                <!-- Магазин 4 -->
+                <div class="shop-card" data-city="spb">
+                    <div class="shop-header">
+                        <h3 class="shop-title">Санкт-Петербург, Репнинская</h3>
+                        <span class="shop-badge pickup">Пункт выдачи</span>
+                    </div>
+                    <div class="shop-address">
+                        <p>улица Репнинская, 7</p>
+                    </div>
+                    <div class="shop-info">
+                        <div class="info-item">
+                            <span class="info-label">Телефон:</span>
+                            <span class="info-value">+7(419)526-42-42</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Часы работы:</span>
+                            <span class="info-value">11:00 - 19:00 (Пн-Пт)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Услуги:</span>
+                            <span class="info-value">Выдача заказов, консультация</span>
+                        </div>
+                    </div>
+                    <div class="shop-actions">
+                        <button class="action-btn route-btn">Проложить маршрут</button>
+                        <button class="action-btn call-btn">Позвонить</button>
+                    </div>
+                </div>
+
+                <!-- Магазин 5 -->
+                <div class="shop-card" data-city="pickup">
+                    <div class="shop-header">
+                        <h3 class="shop-title">Пункт выдачи CDEK</h3>
+                        <span class="shop-badge pickup">Партнер</span>
+                    </div>
+                    <div class="shop-address">
+                        <p>ул. Ленина, 15 (офис CDEK)</p>
+                    </div>
+                    <div class="shop-info">
+                        <div class="info-item">
+                            <span class="info-label">Телефон:</span>
+                            <span class="info-value">8-800-250-04-05</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Часы работы:</span>
+                            <span class="info-value">09:00 - 20:00 ежедневно</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Услуги:</span>
+                            <span class="info-value">Выдача интернет-заказов</span>
+                        </div>
+                    </div>
+                    <div class="shop-actions">
+                        <button class="action-btn route-btn">Проложить маршрут</button>
+                        <button class="action-btn call-btn">Позвонить</button>
+                    </div>
+                </div>
+
+                <!-- Магазин 6 -->
+                <div class="shop-card" data-city="pickup">
+                    <div class="shop-header">
+                        <h3 class="shop-title">Пункт выдачи Boxberry</h3>
+                        <span class="shop-badge pickup">Партнер</span>
+                    </div>
+                    <div class="shop-address">
+                        <p>пр. Мира, 25 (ТЦ "Глобус")</p>
+                    </div>
+                    <div class="shop-info">
+                        <div class="info-item">
+                            <span class="info-label">Телефон:</span>
+                            <span class="info-value">8-800-222-80-00</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Часы работы:</span>
+                            <span class="info-value">10:00 - 21:00 ежедневно</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Услуги:</span>
+                            <span class="info-value">Выдача интернет-заказов</span>
+                        </div>
+                    </div>
+                    <div class="shop-actions">
+                        <button class="action-btn route-btn">Проложить маршрут</button>
+                        <button class="action-btn call-btn">Позвонить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Информация о доставке -->
+    <section class="delivery-section">
+        <div class="container">
+            <div class="delivery-info">
+                <div class="delivery-card">
+                    <div class="delivery-icon">🚚</div>
+                    <h3 class="delivery-title">Доставка по России</h3>
+                    <p class="delivery-text">Доставка в любой город России от 3 дней. Стоимость рассчитывается индивидуально.</p>
+                </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon">🏪</div>
+                    <h3 class="delivery-title">Самовывоз</h3>
+                    <p class="delivery-text">Бесплатный самовывоз из наших магазинов в течение 2 часов после оформления заказа.</p>
+                </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon">🔧</div>
+                    <h3 class="delivery-title">Сервисный центр</h3>
+                    <p class="delivery-text">Во всех магазинах действуют сервисные центры с квалифицированными специалистами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <img src="photos/logo_dark.png" alt="Z-MOTORS" class="footer-logo">
+    <hr class="footer-line">
+
+    <div class="footer-info">
+        <div class="footer-section">
+            <p class="section-title">О компании</p>
+            <ul class="footer-links">
+                <li><a href="404.html">О нас</a></li>
+                <li><a href="404.html">Миссия компании</a></li>
+                <li><a href="404.html">Политика конфиденциальности</a></li>
+                <li><a href="404.html">Видеообзоры Z-MOTORS</a></li>
+                <li><a href="404.html">Видеоотзывы Z-MOTORS</a></li>
+                <li><a href="404.html">Отзывы об Z-MOTORS</a></li>
+                <li><a href="404.html">Карьера в Z-MOTORS</a></li>
+                <li><a href="404.html">Новости</a></li>
+                <li><a href="404.html">Статьи</a></li>
+            </ul>
         </div>
 
-    </footer>
+        <div class="footer-section">
+            <p class="section-title">Покупателям</p>
+            <ul class="footer-links">
+                <li><a href="404.html">Акции и скидки</a></li>
+                <li><a href="404.html">Доставка и оплата</a></li>
+                <li><a href="404.html">Рассрочка и Кредит</a></li>
+                <li><a href="404.html">Правила представления информации</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <p class="section-title">Сервис</p>
+            <ul class="footer-links">
+                <li><a href="404.html">Техническое обслуживание</a></li>
+                <li><a href="404.html">Гарантийный ремонт</a></li>
+                <li><a href="404.html">Платный ремонт</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <p class="section-title">Контакты</p>
+            <ul class="footer-links">
+                <li><a href="404.html">Письмо директору</a></li>
+                <li><a href="404.html">Реквизиты</a></li>
+            </ul>
+            <div class="footer-contact">
+                <p class="contact-phone">телефон для связи<br>
+                    <strong>+7(888) 423-42-42</strong></p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 
