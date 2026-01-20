@@ -1,5 +1,6 @@
 'use strict';
 
+// Находим элементы
 let cartButton = document.getElementById('cart');
 let countElement = document.querySelector('.count');
 let addButtons = document.querySelectorAll('.cart-add-btn');
@@ -9,67 +10,77 @@ let closeCartButton = document.querySelector('.close-cart');
 let cartItemsContainer = document.querySelector('.cart-items');
 let totalPriceElement = document.getElementById('totalPrice');
 let buyBtn = document.getElementById('buyBtn');
-let cartItems = [];
 
-try {
-    let savedCart = localStorage.getItem('z-motors-cart');
-    if (savedCart) {
-        cartItems = JSON.parse(savedCart);
+// Цены товаров
+let prices = [330182, 431990, 419990, 289990, 161990, 169990, 139490];
+
+// Загружаем корзину из localStorage или создаем пустую
+let cartItems = loadCartFromStorage();
+
+//  Загружаем корзину из памяти браузера
+function loadCartFromStorage() {
+    try {
+        let saved = localStorage.getItem('motors-cart');
+        if (saved) {
+            return JSON.parse(saved);
+        }
+    } catch (e) {
+        console.log('Не смогли загрузить корзину');
     }
-} catch (e) {
-    cartItems = [];
+    return [];
 }
 
-// 1. Сохраняем корзину в память браузера
+//  Сохраняем корзину в память браузера
 function saveCartToStorage() {
     try {
-        localStorage.setItem('z-motors-cart', JSON.stringify(cartItems));
+        localStorage.setItem('motors-cart', JSON.stringify(cartItems));
     } catch (e) {
-        console.log('Не удалось сохранить корзину');
+        console.log('Не смогли сохранить корзину');
     }
 }
 
+//  Обновляем корзину
 function updateCart() {
     // Обновляем счетчик
     countElement.textContent = cartItems.length;
     
-    // Обновляем отображение товаров
+    // Показываем товары
     updateCartDisplay();
     
-    // Обновляем кнопки добавить в корзину
+    // Обновляем кнопки
     updateButtons();
     
-    // Обновляем общую сумму
+    // Считаем сумму
     updateTotalPrice();
+    
+    // Сохраняем в память
+    saveCartToStorage();
 }
 
-//  показ товаров в корзине
+//  Показать товары в корзине
 function updateCartDisplay() {
-    // Очищаем корзину
     cartItemsContainer.innerHTML = '';
     
-    // Если корзина пустая
     if (cartItems.length === 0) {
         cartItemsContainer.innerHTML = '<p class="empty-cart">Корзина пуста</p>';
         return;
     }
     
-    // Добавляем каждый товар
     for (let i = 0; i < cartItems.length; i++) {
         let item = cartItems[i];
         
-        // блок товара
         let itemDiv = document.createElement('div');
         itemDiv.className = 'cart-item';
         itemDiv.innerHTML = `
-            <p><b>${item.name}</b></p>
+            <p><strong>${item.name}</strong></p>
             <p>${item.price} ₽</p>
-            <button class="remove-item" data-index="${i}">Удалить</button>`;
+            <button class="remove-item" data-index="${i}">Удалить</button>
+        `;
         
-        cartItemsContainer.append(itemDiv);
+        cartItemsContainer.appendChild(itemDiv);
     }
     
-    // обработчики для кнопок удаления
+    // Вешаем обработчики на кнопки удаления
     let removeButtons = document.querySelectorAll('.remove-item');
     for (let j = 0; j < removeButtons.length; j++) {
         removeButtons[j].addEventListener('click', function() {
@@ -79,20 +90,19 @@ function updateCartDisplay() {
     }
 }
 
-// Удаление товара из корзины
+// Удалить товар из корзины
 function removeFromCart(index) {
     cartItems.splice(index, 1);
     updateCart();
 }
 
-// Обновление кнопок добавить в корзину
+//  Обновить кнопки "добавить в корзину"
 function updateButtons() {
     for (let k = 0; k < addButtons.length; k++) {
         let button = addButtons[k];
         let card = button.closest('.product-card');
         let productName = card.querySelector('.product-name').textContent;
         
-        // Проверяем есть ли товар в корзине
         let found = false;
         for (let i = 0; i < cartItems.length; i++) {
             if (cartItems[i].name === productName) {
@@ -111,18 +121,16 @@ function updateButtons() {
     }
 }
 
-// Подсчет общей суммы
+//  Подсчитать сумму
 function updateTotalPrice() {
     let total = 0;
     
-    // Считаем сумму всех товаров
     for (let i = 0; i < cartItems.length; i++) {
         total += cartItems[i].price;
     }
     
     totalPriceElement.textContent = total + ' ₽';
     
-    // Включаем/выключаем кнопку купить
     if (cartItems.length === 0) {
         buyBtn.disabled = true;
     } else {
@@ -130,7 +138,7 @@ function updateTotalPrice() {
     }
 }
 
-// Открытие/закрытие корзины
+//  Открыть/закрыть корзину
 function openCart() {
     cartPanel.classList.add('open');
     overlay.classList.add('active');
@@ -141,15 +149,13 @@ function closeCart() {
     overlay.classList.remove('active');
 }
 
-// Обработчик для добавить в корзину
+//  Обработчик кнопок "добавить в корзину"
 for (let index = 0; index < addButtons.length; index++) {
     addButtons[index].addEventListener('click', function() {
         let card = this.closest('.product-card');
         let productName = card.querySelector('.product-name').textContent;
         
-        // цены по порядку товаров
-        let prices = [330182, 431990, 419990, 289990, 161990, 169990, 139490];
-        let price = prices[index];
+        let price = prices[index] || 0;
         
         if (this.textContent === 'добавить в корзину') {
             cartItems.push({
@@ -164,21 +170,29 @@ for (let index = 0; index < addButtons.length; index++) {
                 }
             }
         }
+        
         updateCart();
     });
 }
 
-// Покупка
+//  Покупка
 buyBtn.addEventListener('click', function() {
     if (cartItems.length === 0) return;
+    
     alert('Спасибо за покупку! Ваш заказ оформлен. С вами свяжется менеджер.');
+    
+    // Очищаем корзину и localStorage
     cartItems = [];
+    localStorage.removeItem('motors-cart');
     updateCart();
+    
     closeCart();
 });
 
+// 11. Обработчики событий
 cartButton.addEventListener('click', openCart);
 closeCartButton.addEventListener('click', closeCart);
 overlay.addEventListener('click', closeCart);
 
+// 12. Запускаем
 updateCart();
