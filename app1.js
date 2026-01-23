@@ -89,7 +89,7 @@ function removeFromCart(index) {
 
 //  Обновить кнопки добавить в корзину
 function updateButtons() {
-    for (let j = 0; k < addButtons.length; j++) {
+    for (let j = 0; j < addButtons.length; j++) {
         let button = addButtons[j];
         let card = button.closest('.product-card');
         let productName = card.querySelector('.product-name').textContent;
@@ -181,8 +181,8 @@ buyBtn.addEventListener('click', function() {
 });
 
 // Обработчики событий
-cartButton.addEventListener('click', openCart);
-closeCartButton.addEventListener('click', closeCart);
-overlay.addEventListener('click', closeCart);
+cartButton.addEventListener('click', openCart); // Клик по иконке корзины
+closeCartButton.addEventListener('click', closeCart); // Клик по крестику
+overlay.addEventListener('click', closeCart); // Клик по темному фону
 
 updateCart();
