@@ -24,7 +24,7 @@ function loadCartFromStorage() {
         if (saved) {
             return JSON.parse(saved);
         }
-    } catch (e) {
+    } catch (err) {
         console.log('Не смогли загрузить корзину');
     }
     return [];
@@ -34,7 +34,7 @@ function loadCartFromStorage() {
 function saveCartToStorage() {
     try {
         localStorage.setItem('motors-cart', JSON.stringify(cartItems));
-    } catch (e) {
+    } catch (err) {
         console.log('Не смогли сохранить корзину');
     }
 }
@@ -53,7 +53,7 @@ function updateCart() {
     // Считаем сумму
     updateTotalPrice();
     
-    // Сохраняем в память
+    // Сохраняем 
     saveCartToStorage();
 }
 
@@ -72,18 +72,18 @@ function updateCartDisplay() {
         let itemDiv = document.createElement('div');
         itemDiv.className = 'cart-item';
         itemDiv.innerHTML = `
-            <p><strong>${item.name}</strong></p>
+            <p><b>${item.name}</b></p>
             <p>${item.price} ₽</p>
             <button class="remove-item" data-index="${i}">Удалить</button>
         `;
         
-        cartItemsContainer.appendChild(itemDiv);
+        cartItemsContainer.append(itemDiv);
     }
     
-    // Вешаем обработчики на кнопки удаления
+    //обработчики на кнопки удаления
     let removeButtons = document.querySelectorAll('.remove-item');
-    for (let j = 0; j < removeButtons.length; j++) {
-        removeButtons[j].addEventListener('click', function() {
+    for (let i = 0; i < removeButtons.length; i++) {
+        removeButtons[i].addEventListener('click', function() {
             let index = this.getAttribute('data-index');
             removeFromCart(index);
         });
@@ -96,10 +96,10 @@ function removeFromCart(index) {
     updateCart();
 }
 
-//  Обновить кнопки "добавить в корзину"
+//  Обновить кнопки добавить в корзину
 function updateButtons() {
-    for (let k = 0; k < addButtons.length; k++) {
-        let button = addButtons[k];
+    for (let j = 0; k < addButtons.length; j++) {
+        let button = addButtons[j];
         let card = button.closest('.product-card');
         let productName = card.querySelector('.product-name').textContent;
         
@@ -121,7 +121,7 @@ function updateButtons() {
     }
 }
 
-//  Подсчитать сумму
+// Подсчитать сумму
 function updateTotalPrice() {
     let total = 0;
     
@@ -138,24 +138,24 @@ function updateTotalPrice() {
     }
 }
 
-//  Открыть/закрыть корзину
+// открыть корзину
 function openCart() {
     cartPanel.classList.add('open');
     overlay.classList.add('active');
 }
-
+// закрыть корзину
 function closeCart() {
     cartPanel.classList.remove('open');
     overlay.classList.remove('active');
 }
 
-//  Обработчик кнопок "добавить в корзину"
-for (let index = 0; index < addButtons.length; index++) {
-    addButtons[index].addEventListener('click', function() {
+//  обработчик кнопок добавить в корзину
+for (let j = 0; j < addButtons.length; j++) {
+    addButtons[j].addEventListener('click', function() {
         let card = this.closest('.product-card');
         let productName = card.querySelector('.product-name').textContent;
         
-        let price = prices[index] || 0;
+        let price = prices[j] || 0;
         
         if (this.textContent === 'добавить в корзину') {
             cartItems.push({
@@ -189,10 +189,9 @@ buyBtn.addEventListener('click', function() {
     closeCart();
 });
 
-// 11. Обработчики событий
+// Обработчики событий
 cartButton.addEventListener('click', openCart);
 closeCartButton.addEventListener('click', closeCart);
 overlay.addEventListener('click', closeCart);
 
-// 12. Запускаем
 updateCart();
