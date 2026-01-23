@@ -41,20 +41,11 @@ function saveCartToStorage() {
 
 //  Обновляем корзину
 function updateCart() {
-    // Обновляем счетчик
-    countElement.textContent = cartItems.length;
-    
-    // Показываем товары
-    updateCartDisplay();
-    
-    // Обновляем кнопки
-    updateButtons();
-    
-    // Считаем сумму
-    updateTotalPrice();
-    
-    // Сохраняем 
-    saveCartToStorage();
+    countElement.textContent = cartItems.length; // Обновляем счетчик
+    updateCartDisplay(); // Показываем товары
+    updateButtons(); // Меняем кнопки
+    updateTotalPrice(); // Считаем сумму
+    saveCartToStorage(); // Сохраняем в память
 }
 
 //  Показать товары в корзине
