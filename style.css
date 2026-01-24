@@ -2218,3 +2218,207 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+
+/* Фильтр по бюджету */
+.budget-filter {
+    background: linear-gradient(135deg, #2c3e50, #1a252f);
+    color: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.budget-header h2 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+}
+
+.budget-header p {
+    color: #bdc3c7;
+    margin: 0 0 25px 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.budget-input-container {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.budget-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+}
+
+.budget-input-group {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#budgetInput {
+    flex: 1;
+    padding: 18px 20px;
+    border: none;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    outline: none;
+    text-align: center;
+}
+
+#budgetInput::placeholder {
+    color: #95a5a6;
+    font-weight: normal;
+}
+
+.budget-currency {
+    background: #f8f9fa;
+    padding: 18px 25px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    border-left: 2px solid #eee;
+}
+
+.budget-hint {
+    text-align: center;
+    color: #bdc3c7;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.budget-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.budget-btn {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.budget-btn.primary {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: white;
+}
+
+.budget-btn.secondary {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.budget-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.budget-btn.primary:hover {
+    background: linear-gradient(135deg, #d35400, #e67e22);
+}
+
+.budget-btn.secondary:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.budget-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+#budgetMessage {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    flex: 1;
+}
+
+.budget-counter {
+    background: rgba(52, 152, 219, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    border: 2px solid #3498db;
+}
+
+#foundCount {
+    color: #2ecc71;
+    font-size: 20px;
+}
+
+#totalCount {
+    color: #bdc3c7;
+}
+
+/* Алерты */
+.budget-alert {
+    padding: 12px;
+    border-radius: 8px;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.budget-alert.warning {
+    background: rgba(241, 196, 15, 0.2);
+    border: 2px solid #f1c40f;
+    color: #f1c40f;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .budget-filter {
+        padding: 20px;
+        margin: 20px 15px;
+    }
+    
+    .budget-buttons {
+        flex-direction: column;
+    }
+    
+    .budget-result {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .budget-header h2 {
+        font-size: 20px;
+    }
+    
+    #budgetInput {
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    .budget-currency {
+        font-size: 20px;
+        padding: 15px 20px;
+    }
+}

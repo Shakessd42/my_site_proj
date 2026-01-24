@@ -32,6 +32,40 @@
         </div>
 
         <br><br>
+
+        <!-- Фильтр по бюджету -->
+        <div class="budget-filter">
+            <div class="budget-header">
+                <h2>🎯 Подберите мотоцикл по бюджету</h2>
+                <p>Введите вашу максимальную сумму, и мы покажем подходящие варианты</p>
+            </div>
+
+            <div class="budget-input-container">
+                <div class="budget-input-wrapper">
+                    <label for="budgetInput" class="budget-label">Ваш бюджет:</label>
+                    <div class="budget-input-group">
+                        <input type="number" id="budgetInput" placeholder="300000" min="100000" max="500000"
+                            step="10000" value="100000">
+                        <span class="budget-currency">₽</span>
+                    </div>
+                    <div class="budget-hint">
+                        Введите сумму от 100 000 до 500 000 ₽
+                    </div>
+                </div>
+
+                <div class="budget-buttons">
+                    <button id="applyBudget" class="budget-btn primary">Применить</button>
+                    <button id="resetBudget" class="budget-btn secondary">Сбросить</button>
+                </div>
+            </div>
+
+            <div class="budget-result">
+                <p id="budgetMessage">Показаны все мотоциклы</p>
+                <div class="budget-counter">
+                    <span id="foundCount">7</span> из <span id="totalCount">7</span> доступно
+                </div>
+            </div>
+        </div>
         <section class="moto">
             <div class="products-grid">
 
@@ -319,6 +353,7 @@
     <div class="overlay"></div>
 
     <script src="app1.js"></script>
+    <script src="founder.js"></script>
 </body>
 
 </html>
