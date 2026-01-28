@@ -26,13 +26,12 @@ if (form) {
         btn.textContent = 'Отправка...';
         btn.disabled = true;
 
-        // Отправляем на сервер
         fetch(API_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(formData) //пакет данных
+            body: JSON.stringify(formData)
         })
         .then(function (response) {
             if (response.status === 201) {
