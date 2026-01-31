@@ -58,7 +58,7 @@ function filterProducts(budget) {
     return found;
 }
 
-// Кнопка "Применить"
+// Кнопка Применить
 applyButton.addEventListener('click', function() {
     let budget = parseInt(budgetInput.value);
     

@@ -129,12 +129,10 @@ function updateTotalPrice() {
     }
 }
 
-// открыть корзину
 function openCart() {
     cartPanel.classList.add('open');
     overlay.classList.add('active');
 }
-// закрыть корзину
 function closeCart() {
     cartPanel.classList.remove('open');
     overlay.classList.remove('active');
@@ -183,6 +181,6 @@ buyBtn.addEventListener('click', function() {
 // Обработчики событий
 cartButton.addEventListener('click', openCart); // Клик по иконке корзины
 closeCartButton.addEventListener('click', closeCart); // Клик по крестику
-overlay.addEventListener('click', closeCart); // Клик по темному фону
+overlay.addEventListener('click', closeCart); // Клик по оверлею
 
 updateCart();
