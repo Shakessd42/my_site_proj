@@ -1,6 +1,6 @@
 'use strict';
 
-const API_URL = "http://web4.informatics.ru:82/api/220b9bf60ef069aac67046a85b4a1825";
+const API_URL = "";
 
 let form = document.querySelector('form'); 
 
